@@ -18,6 +18,8 @@ Then standard output continuously like that
 ## Build
 ```
 go build -ldflags="-w -s"
+# We can use upx to compress our bin file, although it would cost some memory while our target program running
+upx -3 -o nettop-line-3 nettop-line && mv nettop-line-3 nettop-line 
 ```
 
 ## Why wrap nettop
