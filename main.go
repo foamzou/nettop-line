@@ -21,7 +21,6 @@ func main () {
 				"For Example: ./nettop-line -P -d -L 0 -J bytes_in,bytes_out -t external -s 1 -c")
 		os.Exit(0)
 	}
-	fmt.Println(params)
 	go nettop.Start(statChan, params)
 
 	for {
