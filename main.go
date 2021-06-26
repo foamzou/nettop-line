@@ -34,7 +34,11 @@ func output()  {
 	if len(outputStrList) <= 0 {
 		return
 	}
-	fmt.Println(strings.Join(outputStrList, "|SPLIT|"))
+
+	// Skip the the loop data when it was flag dirty
+	if strings.Index(outputStrList[0], nettop.DIRTY_DATA_FLAG) != 0 {
+		fmt.Println(strings.Join(outputStrList, "|SPLIT|"))
+	}
 
 	// clear
 	outputStrList = make([]string, 0)

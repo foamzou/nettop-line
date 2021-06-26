@@ -22,6 +22,11 @@ go build -ldflags="-w -s"
 upx -3 -o nettop-line-3 nettop-line && mv nettop-line-3 nettop-line 
 ```
 
+## Notice
+The program would drop the first output from nettop which was "dirty data"(For it was not really increase data).
+
+So, You do not need to drop the dirty data again
+
 ## Why wrap nettop
 If we want to get delta in/out traffic per process in our program, we can call `nettop`.
 
