@@ -21,7 +21,7 @@ go build -ldflags="-w -s"
 
 # We can use upx to compress our bin file, although it would cost some memory while our target program running
 
-# NOTICE：please don't use upx if the nettop-line could not working well after compress ()
+# NOTICE：please don't use upx if the nettop-line could not working well after compress
 upx -3 -o nettop-line-3 nettop-line && mv nettop-line-3 nettop-line 
 ```
 
